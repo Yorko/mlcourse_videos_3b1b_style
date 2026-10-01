@@ -1,0 +1,1346 @@
+{
+ "meta": {
+  "source": "https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html",
+  "generated_by": "data/compute.ipynb",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.3"
+ },
+ "_note": "Scene 10. Illustrative (not fitted), like loan_tree.json. v2 = the tree 'regrown' after a few past applicants change.",
+ "applicant": {
+  "age": 23,
+  "home": false,
+  "income": 3800,
+  "higher_edu": false
+ },
+ "v1_path": [
+  "root",
+  "income5k",
+  "deny_income"
+ ],
+ "v1_reasons": [
+  "Owns a home?",
+  "Income > 5,000?"
+ ],
+ "v2": {
+  "id": "v2_age25",
+  "q": "Age > 25?",
+  "no": {
+   "id": "v2_edu",
+   "q": "Higher education?",
+   "no": {
+    "id": "v2_deny_edu",
+    "leaf": "Deny"
+   },
+   "yes": {
+    "id": "v2_income2k",
+    "q": "Income > 2,000?",
+    "no": {
+     "id": "v2_deny_income2k",
+     "leaf": "Deny"
+    },
+    "yes": {
+     "id": "v2_approve_income2k",
+     "leaf": "Approve"
+    }
+   }
+  },
+  "yes": {
+   "id": "v2_home",
+   "q": "Owns a home?",
+   "no": {
+    "id": "v2_income5k",
+    "q": "Income > 5,000?",
+    "no": {
+     "id": "v2_deny_income5k",
+     "leaf": "Deny"
+    },
+    "yes": {
+     "id": "v2_approve_income5k",
+     "leaf": "Approve"
+    }
+   },
+   "yes": {
+    "id": "v2_approve_home",
+    "leaf": "Approve"
+   }
+  }
+ },
+ "v2_path": [
+  "v2_age25",
+  "v2_edu",
+  "v2_deny_edu"
+ ],
+ "v2_reasons": [
+  "Age > 25?",
+  "Higher education?"
+ ],
+ "past_applicants": {
+  "before": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   0
+  ],
+  "after": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  "flipped": [
+   0,
+   2,
+   4
+  ]
+ },
+ "forest": {
+  "n_trees": 120,
+  "tally": {
+   "Deny": 87,
+   "Approve": 33
+  },
+  "majority": "Deny",
+  "trees": [
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 3,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Approve"
+    ],
+    "landing": 3,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 1,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Deny",
+     "Deny",
+     "Approve"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Deny"
+   },
+   {
+    "leaves": [
+     "Approve",
+     "Approve",
+     "Approve",
+     "Deny"
+    ],
+    "landing": 0,
+    "vote": "Approve"
+   },
+   {
+    "leaves": [
+     "Deny",
+     "Approve",
+     "Deny",
+     "Deny"
+    ],
+    "landing": 2,
+    "vote": "Deny"
+   }
+  ],
+  "representatives": [
+   0,
+   4,
+   8,
+   12,
+   16,
+   20,
+   24,
+   28,
+   32,
+   36,
+   40,
+   44,
+   48,
+   52,
+   56,
+   60,
+   64,
+   68,
+   72,
+   76,
+   80,
+   84,
+   88,
+   92,
+   96,
+   100,
+   104,
+   108,
+   112,
+   116
+  ],
+  "rep_tally": {
+   "Deny": 22,
+   "Approve": 8
+  }
+ }
+}

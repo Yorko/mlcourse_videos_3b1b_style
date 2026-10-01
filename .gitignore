@@ -1,0 +1,30 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# OS
+.DS_Store
+
+# Reference material: lecture recordings, voice samples (~1.2 GB)
+sample_media/
+
+# Manim output: renders, voiceover cache, Tex/text caches (regenerable)
+# Keep media/images/: hand-supplied source assets for scenes (e.g. s01a_intro)
+media/*
+!media/images/
+
+# Heavy media anywhere else
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.gif
+*.zip
+*.tar.gz

@@ -1,0 +1,25 @@
+{
+ "meta": {
+  "source": "https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html",
+  "generated_by": "data/compute.ipynb",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.3"
+ },
+ "ball_extrapolation": {
+  "probes": [
+   {
+    "x": 19,
+    "leaf": 10,
+    "prediction": "blue"
+   },
+   {
+    "x": 25,
+    "leaf": 10,
+    "prediction": "blue"
+   }
+  ],
+  "same_leaf": true,
+  "leaf_rule": "x > 18",
+  "leaf_threshold": 18
+ }
+}

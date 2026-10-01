@@ -1,0 +1,2848 @@
+{
+ "meta": {
+  "source": "https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html",
+  "generated_by": "data/compute.ipynb",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.3"
+ },
+ "depth_stops": [
+  3,
+  6,
+  10,
+  null
+ ],
+ "slivers": [
+  {
+   "node": 20,
+   "box": [
+    [
+     0.979293,
+     0.996992
+    ],
+    [
+     0.825094,
+     1.178138
+    ]
+   ],
+   "prediction": 1,
+   "points": [
+    127
+   ],
+   "area": 0.0062
+  },
+  {
+   "node": 33,
+   "box": [
+    [
+     2.712728,
+     2.729639
+    ],
+    [
+     -0.810659,
+     1.14457
+    ]
+   ],
+   "prediction": 0,
+   "points": [
+    34
+   ],
+   "area": 0.0331
+  },
+  {
+   "node": 47,
+   "box": [
+    [
+     0.228894,
+     5.697435
+    ],
+    [
+     1.716526,
+     1.723245
+    ]
+   ],
+   "prediction": 0,
+   "points": [
+    52
+   ],
+   "area": 0.0367
+  },
+  {
+   "node": 7,
+   "box": [
+    [
+     0.265168,
+     1.524377
+    ],
+    [
+     0.571866,
+     0.601474
+    ]
+   ],
+   "prediction": 1,
+   "points": [
+    176
+   ],
+   "area": 0.0373
+  },
+  {
+   "node": 22,
+   "box": [
+    [
+     0.265168,
+     1.524377
+    ],
+    [
+     1.178138,
+     1.210845
+    ]
+   ],
+   "prediction": 1,
+   "points": [
+    101
+   ],
+   "area": 0.0412
+  },
+  {
+   "node": 11,
+   "box": [
+    [
+     0.265168,
+     1.524377
+    ],
+    [
+     0.70538,
+     0.738537
+    ]
+   ],
+   "prediction": 1,
+   "points": [
+    140,
+    144
+   ],
+   "area": 0.0418
+  },
+  {
+   "node": 16,
+   "box": [
+    [
+     0.777244,
+     1.524377
+    ],
+    [
+     0.738537,
+     0.825094
+    ]
+   ],
+   "prediction": 1,
+   "points": [
+    124
+   ],
+   "area": 0.0647
+  },
+  {
+   "node": 49,
+   "box": [
+    [
+     0.228894,
+     5.697435
+    ],
+    [
+     1.861638,
+     1.893412
+    ]
+   ],
+   "prediction": 0,
+   "points": [
+    2
+   ],
+   "area": 0.1738
+  },
+  {
+   "node": 35,
+   "box": [
+    [
+     1.524377,
+     5.697435
+    ],
+    [
+     1.14457,
+     1.210845
+    ]
+   ],
+   "prediction": 0,
+   "points": [
+    5
+   ],
+   "area": 0.2766
+  },
+  {
+   "node": 30,
+   "box": [
+    [
+     2.396178,
+     2.555414
+    ],
+    [
+     -0.810659,
+     1.14457
+    ]
+   ],
+   "prediction": 0,
+   "points": [
+    63
+   ],
+   "area": 0.3113
+  }
+ ],
+ "min_leaf": [
+  {
+   "min_samples_leaf": 1,
+   "actual_depth": 12,
+   "n_leaves": 26,
+   "train_accuracy": 1.0,
+   "segments": [
+    {
+     "node": 0,
+     "depth": 0,
+     "feature": 1,
+     "threshold": 1.210845,
+     "start": [
+      -3.098126,
+      1.210845
+     ],
+     "end": [
+      5.697435,
+      1.210845
+     ]
+    },
+    {
+     "node": 1,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 1.524377,
+     "start": [
+      1.524377,
+      -4.399931
+     ],
+     "end": [
+      1.524377,
+      1.210845
+     ]
+    },
+    {
+     "node": 2,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 0.571866,
+     "start": [
+      -3.098126,
+      0.571866
+     ],
+     "end": [
+      1.524377,
+      0.571866
+     ]
+    },
+    {
+     "node": 4,
+     "depth": 3,
+     "feature": 0,
+     "threshold": 0.265168,
+     "start": [
+      0.265168,
+      0.571866
+     ],
+     "end": [
+      0.265168,
+      1.210845
+     ]
+    },
+    {
+     "node": 6,
+     "depth": 4,
+     "feature": 1,
+     "threshold": 0.601474,
+     "start": [
+      0.265168,
+      0.601474
+     ],
+     "end": [
+      1.524377,
+      0.601474
+     ]
+    },
+    {
+     "node": 8,
+     "depth": 5,
+     "feature": 1,
+     "threshold": 0.70538,
+     "start": [
+      0.265168,
+      0.70538
+     ],
+     "end": [
+      1.524377,
+      0.70538
+     ]
+    },
+    {
+     "node": 10,
+     "depth": 6,
+     "feature": 1,
+     "threshold": 0.738537,
+     "start": [
+      0.265168,
+      0.738537
+     ],
+     "end": [
+      1.524377,
+      0.738537
+     ]
+    },
+    {
+     "node": 12,
+     "depth": 7,
+     "feature": 1,
+     "threshold": 1.178138,
+     "start": [
+      0.265168,
+      1.178138
+     ],
+     "end": [
+      1.524377,
+      1.178138
+     ]
+    },
+    {
+     "node": 13,
+     "depth": 8,
+     "feature": 0,
+     "threshold": 0.777244,
+     "start": [
+      0.777244,
+      0.738537
+     ],
+     "end": [
+      0.777244,
+      1.178138
+     ]
+    },
+    {
+     "node": 15,
+     "depth": 9,
+     "feature": 1,
+     "threshold": 0.825094,
+     "start": [
+      0.777244,
+      0.825094
+     ],
+     "end": [
+      1.524377,
+      0.825094
+     ]
+    },
+    {
+     "node": 17,
+     "depth": 10,
+     "feature": 0,
+     "threshold": 0.979293,
+     "start": [
+      0.979293,
+      0.825094
+     ],
+     "end": [
+      0.979293,
+      1.178138
+     ]
+    },
+    {
+     "node": 19,
+     "depth": 11,
+     "feature": 0,
+     "threshold": 0.996992,
+     "start": [
+      0.996992,
+      0.825094
+     ],
+     "end": [
+      0.996992,
+      1.178138
+     ]
+    },
+    {
+     "node": 23,
+     "depth": 2,
+     "feature": 1,
+     "threshold": -0.810659,
+     "start": [
+      1.524377,
+      -0.810659
+     ],
+     "end": [
+      5.697435,
+      -0.810659
+     ]
+    },
+    {
+     "node": 25,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 1.14457,
+     "start": [
+      1.524377,
+      1.14457
+     ],
+     "end": [
+      5.697435,
+      1.14457
+     ]
+    },
+    {
+     "node": 26,
+     "depth": 4,
+     "feature": 0,
+     "threshold": 2.396178,
+     "start": [
+      2.396178,
+      -0.810659
+     ],
+     "end": [
+      2.396178,
+      1.14457
+     ]
+    },
+    {
+     "node": 28,
+     "depth": 5,
+     "feature": 0,
+     "threshold": 2.729639,
+     "start": [
+      2.729639,
+      -0.810659
+     ],
+     "end": [
+      2.729639,
+      1.14457
+     ]
+    },
+    {
+     "node": 29,
+     "depth": 6,
+     "feature": 0,
+     "threshold": 2.555414,
+     "start": [
+      2.555414,
+      -0.810659
+     ],
+     "end": [
+      2.555414,
+      1.14457
+     ]
+    },
+    {
+     "node": 31,
+     "depth": 7,
+     "feature": 0,
+     "threshold": 2.712728,
+     "start": [
+      2.712728,
+      -0.810659
+     ],
+     "end": [
+      2.712728,
+      1.14457
+     ]
+    },
+    {
+     "node": 36,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 0.228894,
+     "start": [
+      0.228894,
+      1.210845
+     ],
+     "end": [
+      0.228894,
+      4.818876
+     ]
+    },
+    {
+     "node": 37,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 1.641703,
+     "start": [
+      -3.098126,
+      1.641703
+     ],
+     "end": [
+      0.228894,
+      1.641703
+     ]
+    },
+    {
+     "node": 39,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 1.989241,
+     "start": [
+      -3.098126,
+      1.989241
+     ],
+     "end": [
+      0.228894,
+      1.989241
+     ]
+    },
+    {
+     "node": 42,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 1.893412,
+     "start": [
+      0.228894,
+      1.893412
+     ],
+     "end": [
+      5.697435,
+      1.893412
+     ]
+    },
+    {
+     "node": 43,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 1.861638,
+     "start": [
+      0.228894,
+      1.861638
+     ],
+     "end": [
+      5.697435,
+      1.861638
+     ]
+    },
+    {
+     "node": 44,
+     "depth": 4,
+     "feature": 1,
+     "threshold": 1.716526,
+     "start": [
+      0.228894,
+      1.716526
+     ],
+     "end": [
+      5.697435,
+      1.716526
+     ]
+    },
+    {
+     "node": 46,
+     "depth": 5,
+     "feature": 1,
+     "threshold": 1.723245,
+     "start": [
+      0.228894,
+      1.723245
+     ],
+     "end": [
+      5.697435,
+      1.723245
+     ]
+    }
+   ],
+   "leaves": [
+    {
+     "node": 3,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       -4.399931,
+       0.571866
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      69,
+      0
+     ]
+    },
+    {
+     "node": 5,
+     "box": [
+      [
+       -3.098126,
+       0.265168
+      ],
+      [
+       0.571866,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      5,
+      0
+     ]
+    },
+    {
+     "node": 7,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       0.571866,
+       0.601474
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      1
+     ]
+    },
+    {
+     "node": 9,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       0.601474,
+       0.70538
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      3,
+      0
+     ]
+    },
+    {
+     "node": 11,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       0.70538,
+       0.738537
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      2
+     ]
+    },
+    {
+     "node": 14,
+     "box": [
+      [
+       0.265168,
+       0.777244
+      ],
+      [
+       0.738537,
+       1.178138
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      4,
+      0
+     ]
+    },
+    {
+     "node": 16,
+     "box": [
+      [
+       0.777244,
+       1.524377
+      ],
+      [
+       0.738537,
+       0.825094
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      1
+     ]
+    },
+    {
+     "node": 18,
+     "box": [
+      [
+       0.777244,
+       0.979293
+      ],
+      [
+       0.825094,
+       1.178138
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      2,
+      0
+     ]
+    },
+    {
+     "node": 20,
+     "box": [
+      [
+       0.979293,
+       0.996992
+      ],
+      [
+       0.825094,
+       1.178138
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      1
+     ]
+    },
+    {
+     "node": 21,
+     "box": [
+      [
+       0.996992,
+       1.524377
+      ],
+      [
+       0.825094,
+       1.178138
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      2,
+      0
+     ]
+    },
+    {
+     "node": 22,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       1.178138,
+       1.210845
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      1
+     ]
+    },
+    {
+     "node": 24,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       -4.399931,
+       -0.810659
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      3,
+      0
+     ]
+    },
+    {
+     "node": 27,
+     "box": [
+      [
+       1.524377,
+       2.396178
+      ],
+      [
+       -0.810659,
+       1.14457
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      7
+     ]
+    },
+    {
+     "node": 30,
+     "box": [
+      [
+       2.396178,
+       2.555414
+      ],
+      [
+       -0.810659,
+       1.14457
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      1,
+      0
+     ]
+    },
+    {
+     "node": 32,
+     "box": [
+      [
+       2.555414,
+       2.712728
+      ],
+      [
+       -0.810659,
+       1.14457
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      2
+     ]
+    },
+    {
+     "node": 33,
+     "box": [
+      [
+       2.712728,
+       2.729639
+      ],
+      [
+       -0.810659,
+       1.14457
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      1,
+      0
+     ]
+    },
+    {
+     "node": 34,
+     "box": [
+      [
+       2.729639,
+       5.697435
+      ],
+      [
+       -0.810659,
+       1.14457
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      5
+     ]
+    },
+    {
+     "node": 35,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       1.14457,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      1,
+      0
+     ]
+    },
+    {
+     "node": 38,
+     "box": [
+      [
+       -3.098126,
+       0.228894
+      ],
+      [
+       1.210845,
+       1.641703
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      4,
+      0
+     ]
+    },
+    {
+     "node": 40,
+     "box": [
+      [
+       -3.098126,
+       0.228894
+      ],
+      [
+       1.641703,
+       1.989241
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      3
+     ]
+    },
+    {
+     "node": 41,
+     "box": [
+      [
+       -3.098126,
+       0.228894
+      ],
+      [
+       1.989241,
+       4.818876
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      3,
+      0
+     ]
+    },
+    {
+     "node": 45,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.210845,
+       1.716526
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      19
+     ]
+    },
+    {
+     "node": 47,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.716526,
+       1.723245
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      1,
+      0
+     ]
+    },
+    {
+     "node": 48,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.723245,
+       1.861638
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      6
+     ]
+    },
+    {
+     "node": 49,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.861638,
+       1.893412
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      1,
+      0
+     ]
+    },
+    {
+     "node": 50,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.893412,
+       4.818876
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "min_samples_leaf": 5,
+   "actual_depth": 5,
+   "n_leaves": 12,
+   "train_accuracy": 0.93,
+   "segments": [
+    {
+     "node": 0,
+     "depth": 0,
+     "feature": 1,
+     "threshold": 1.210845,
+     "start": [
+      -3.098126,
+      1.210845
+     ],
+     "end": [
+      5.697435,
+      1.210845
+     ]
+    },
+    {
+     "node": 1,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 1.524377,
+     "start": [
+      1.524377,
+      -4.399931
+     ],
+     "end": [
+      1.524377,
+      1.210845
+     ]
+    },
+    {
+     "node": 2,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 0.571866,
+     "start": [
+      -3.098126,
+      0.571866
+     ],
+     "end": [
+      1.524377,
+      0.571866
+     ]
+    },
+    {
+     "node": 4,
+     "depth": 3,
+     "feature": 0,
+     "threshold": 0.265168,
+     "start": [
+      0.265168,
+      0.571866
+     ],
+     "end": [
+      0.265168,
+      1.210845
+     ]
+    },
+    {
+     "node": 6,
+     "depth": 4,
+     "feature": 1,
+     "threshold": 0.789483,
+     "start": [
+      0.265168,
+      0.789483
+     ],
+     "end": [
+      1.524377,
+      0.789483
+     ]
+    },
+    {
+     "node": 9,
+     "depth": 2,
+     "feature": 1,
+     "threshold": -0.159411,
+     "start": [
+      1.524377,
+      -0.159411
+     ],
+     "end": [
+      5.697435,
+      -0.159411
+     ]
+    },
+    {
+     "node": 11,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 0.567586,
+     "start": [
+      1.524377,
+      0.567586
+     ],
+     "end": [
+      5.697435,
+      0.567586
+     ]
+    },
+    {
+     "node": 14,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 0.228894,
+     "start": [
+      0.228894,
+      1.210845
+     ],
+     "end": [
+      0.228894,
+      4.818876
+     ]
+    },
+    {
+     "node": 15,
+     "depth": 2,
+     "feature": 0,
+     "threshold": -0.236717,
+     "start": [
+      -0.236717,
+      1.210845
+     ],
+     "end": [
+      -0.236717,
+      4.818876
+     ]
+    },
+    {
+     "node": 18,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 1.893412,
+     "start": [
+      0.228894,
+      1.893412
+     ],
+     "end": [
+      5.697435,
+      1.893412
+     ]
+    },
+    {
+     "node": 19,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 1.716526,
+     "start": [
+      0.228894,
+      1.716526
+     ],
+     "end": [
+      5.697435,
+      1.716526
+     ]
+    }
+   ],
+   "leaves": [
+    {
+     "node": 3,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       -4.399931,
+       0.571866
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      69,
+      0
+     ]
+    },
+    {
+     "node": 5,
+     "box": [
+      [
+       -3.098126,
+       0.265168
+      ],
+      [
+       0.571866,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      5,
+      0
+     ]
+    },
+    {
+     "node": 7,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       0.571866,
+       0.789483
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      4,
+      4
+     ]
+    },
+    {
+     "node": 8,
+     "box": [
+      [
+       0.265168,
+       1.524377
+      ],
+      [
+       0.789483,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      7,
+      2
+     ]
+    },
+    {
+     "node": 10,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       -4.399931,
+       -0.159411
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      4,
+      1
+     ]
+    },
+    {
+     "node": 12,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       -0.159411,
+       0.567586
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      7
+     ]
+    },
+    {
+     "node": 13,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       0.567586,
+       1.210845
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      2,
+      6
+     ]
+    },
+    {
+     "node": 16,
+     "box": [
+      [
+       -3.098126,
+       -0.236717
+      ],
+      [
+       1.210845,
+       4.818876
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      4,
+      1
+     ]
+    },
+    {
+     "node": 17,
+     "box": [
+      [
+       -0.236717,
+       0.228894
+      ],
+      [
+       1.210845,
+       4.818876
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      3,
+      2
+     ]
+    },
+    {
+     "node": 20,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.210845,
+       1.716526
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      19
+     ]
+    },
+    {
+     "node": 21,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.716526,
+       1.893412
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      2,
+      6
+     ]
+    },
+    {
+     "node": 22,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.893412,
+       4.818876
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "min_samples_leaf": 10,
+   "actual_depth": 4,
+   "n_leaves": 9,
+   "train_accuracy": 0.915,
+   "segments": [
+    {
+     "node": 0,
+     "depth": 0,
+     "feature": 1,
+     "threshold": 1.210845,
+     "start": [
+      -3.098126,
+      1.210845
+     ],
+     "end": [
+      5.697435,
+      1.210845
+     ]
+    },
+    {
+     "node": 1,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 1.524377,
+     "start": [
+      1.524377,
+      -4.399931
+     ],
+     "end": [
+      1.524377,
+      1.210845
+     ]
+    },
+    {
+     "node": 2,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 0.571866,
+     "start": [
+      -3.098126,
+      0.571866
+     ],
+     "end": [
+      1.524377,
+      0.571866
+     ]
+    },
+    {
+     "node": 4,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 0.803406,
+     "start": [
+      -3.098126,
+      0.803406
+     ],
+     "end": [
+      1.524377,
+      0.803406
+     ]
+    },
+    {
+     "node": 7,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 0.469024,
+     "start": [
+      1.524377,
+      0.469024
+     ],
+     "end": [
+      5.697435,
+      0.469024
+     ]
+    },
+    {
+     "node": 10,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 0.228894,
+     "start": [
+      0.228894,
+      1.210845
+     ],
+     "end": [
+      0.228894,
+      4.818876
+     ]
+    },
+    {
+     "node": 12,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 1.893412,
+     "start": [
+      0.228894,
+      1.893412
+     ],
+     "end": [
+      5.697435,
+      1.893412
+     ]
+    },
+    {
+     "node": 13,
+     "depth": 3,
+     "feature": 1,
+     "threshold": 1.681807,
+     "start": [
+      0.228894,
+      1.681807
+     ],
+     "end": [
+      5.697435,
+      1.681807
+     ]
+    }
+   ],
+   "leaves": [
+    {
+     "node": 3,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       -4.399931,
+       0.571866
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      69,
+      0
+     ]
+    },
+    {
+     "node": 5,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       0.571866,
+       0.803406
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      6,
+      4
+     ]
+    },
+    {
+     "node": 6,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       0.803406,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      10,
+      2
+     ]
+    },
+    {
+     "node": 8,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       -4.399931,
+       0.469024
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      4,
+      6
+     ]
+    },
+    {
+     "node": 9,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       0.469024,
+       1.210845
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      2,
+      8
+     ]
+    },
+    {
+     "node": 11,
+     "box": [
+      [
+       -3.098126,
+       0.228894
+      ],
+      [
+       1.210845,
+       4.818876
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      7,
+      3
+     ]
+    },
+    {
+     "node": 14,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.210845,
+       1.681807
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      17
+     ]
+    },
+    {
+     "node": 15,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.681807,
+       1.893412
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      2,
+      8
+     ]
+    },
+    {
+     "node": 16,
+     "box": [
+      [
+       0.228894,
+       5.697435
+      ],
+      [
+       1.893412,
+       4.818876
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "min_samples_leaf": 20,
+   "actual_depth": 3,
+   "n_leaves": 6,
+   "train_accuracy": 0.895,
+   "segments": [
+    {
+     "node": 0,
+     "depth": 0,
+     "feature": 1,
+     "threshold": 1.210845,
+     "start": [
+      -3.098126,
+      1.210845
+     ],
+     "end": [
+      5.697435,
+      1.210845
+     ]
+    },
+    {
+     "node": 1,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 1.524377,
+     "start": [
+      1.524377,
+      -4.399931
+     ],
+     "end": [
+      1.524377,
+      1.210845
+     ]
+    },
+    {
+     "node": 2,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 0.571866,
+     "start": [
+      -3.098126,
+      0.571866
+     ],
+     "end": [
+      1.524377,
+      0.571866
+     ]
+    },
+    {
+     "node": 6,
+     "depth": 1,
+     "feature": 0,
+     "threshold": 1.039239,
+     "start": [
+      1.039239,
+      1.210845
+     ],
+     "end": [
+      1.039239,
+      4.818876
+     ]
+    },
+    {
+     "node": 8,
+     "depth": 2,
+     "feature": 1,
+     "threshold": 1.820248,
+     "start": [
+      1.039239,
+      1.820248
+     ],
+     "end": [
+      5.697435,
+      1.820248
+     ]
+    }
+   ],
+   "leaves": [
+    {
+     "node": 3,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       -4.399931,
+       0.571866
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      69,
+      0
+     ]
+    },
+    {
+     "node": 4,
+     "box": [
+      [
+       -3.098126,
+       1.524377
+      ],
+      [
+       0.571866,
+       1.210845
+      ]
+     ],
+     "prediction": 0,
+     "counts": [
+      16,
+      6
+     ]
+    },
+    {
+     "node": 5,
+     "box": [
+      [
+       1.524377,
+       5.697435
+      ],
+      [
+       -4.399931,
+       1.210845
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      6,
+      14
+     ]
+    },
+    {
+     "node": 7,
+     "box": [
+      [
+       -3.098126,
+       1.039239
+      ],
+      [
+       1.210845,
+       4.818876
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      8,
+      14
+     ]
+    },
+    {
+     "node": 9,
+     "box": [
+      [
+       1.039239,
+       5.697435
+      ],
+      [
+       1.210845,
+       1.820248
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      1,
+      19
+     ]
+    },
+    {
+     "node": 10,
+     "box": [
+      [
+       1.039239,
+       5.697435
+      ],
+      [
+       1.820248,
+       4.818876
+      ]
+     ],
+     "prediction": 1,
+     "counts": [
+      0,
+      47
+     ]
+    }
+   ]
+  }
+ ],
+ "ccp": {
+  "alpha": 0.030984,
+  "cv_accuracy": 0.883,
+  "n_leaves_full": 26,
+  "n_leaves_pruned": 5,
+  "kept": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   23,
+   36,
+   37,
+   42
+  ],
+  "removed": [
+   4,
+   23,
+   37,
+   42
+  ],
+  "full_nodes": [
+   {
+    "id": 0,
+    "depth": 0,
+    "leaf": false,
+    "samples": 200,
+    "counts": [
+     100,
+     100
+    ],
+    "impurity": 1.0,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 1.210845,
+    "left": 1,
+    "right": 36,
+    "gain": 0.412055
+   },
+   {
+    "id": 1,
+    "depth": 1,
+    "leaf": false,
+    "samples": 111,
+    "counts": [
+     91,
+     20
+    ],
+    "impurity": 0.680471,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 1.524377,
+    "left": 2,
+    "right": 23,
+    "gain": 0.234281
+   },
+   {
+    "id": 2,
+    "depth": 2,
+    "leaf": false,
+    "samples": 91,
+    "counts": [
+     85,
+     6
+    ],
+    "impurity": 0.350564,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 0.571866,
+    "left": 3,
+    "right": 4,
+    "gain": 0.146193
+   },
+   {
+    "id": 3,
+    "depth": 3,
+    "leaf": true,
+    "samples": 69,
+    "counts": [
+     69,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 4,
+    "depth": 3,
+    "leaf": false,
+    "samples": 22,
+    "counts": [
+     16,
+     6
+    ],
+    "impurity": 0.845351,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 0.265168,
+    "left": 5,
+    "right": 6,
+    "gain": 0.121563
+   },
+   {
+    "id": 5,
+    "depth": 4,
+    "leaf": true,
+    "samples": 5,
+    "counts": [
+     5,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 6,
+    "depth": 4,
+    "leaf": false,
+    "samples": 17,
+    "counts": [
+     11,
+     6
+    ],
+    "impurity": 0.936667,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 0.601474,
+    "left": 7,
+    "right": 8,
+    "gain": 0.093337
+   },
+   {
+    "id": 7,
+    "depth": 5,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     0,
+     1
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 8,
+    "depth": 5,
+    "leaf": false,
+    "samples": 16,
+    "counts": [
+     11,
+     5
+    ],
+    "impurity": 0.896038,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 0.70538,
+    "left": 9,
+    "right": 10,
+    "gain": 0.115033
+   },
+   {
+    "id": 9,
+    "depth": 6,
+    "leaf": true,
+    "samples": 3,
+    "counts": [
+     3,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 10,
+    "depth": 6,
+    "leaf": false,
+    "samples": 13,
+    "counts": [
+     8,
+     5
+    ],
+    "impurity": 0.961237,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 0.738537,
+    "left": 11,
+    "right": 12,
+    "gain": 0.24594
+   },
+   {
+    "id": 11,
+    "depth": 7,
+    "leaf": true,
+    "samples": 2,
+    "counts": [
+     0,
+     2
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 12,
+    "depth": 7,
+    "leaf": false,
+    "samples": 11,
+    "counts": [
+     8,
+     3
+    ],
+    "impurity": 0.845351,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 1.178138,
+    "left": 13,
+    "right": 22,
+    "gain": 0.189053
+   },
+   {
+    "id": 13,
+    "depth": 8,
+    "leaf": false,
+    "samples": 10,
+    "counts": [
+     8,
+     2
+    ],
+    "impurity": 0.721928,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 0.777244,
+    "left": 14,
+    "right": 15,
+    "gain": 0.170951
+   },
+   {
+    "id": 14,
+    "depth": 9,
+    "leaf": true,
+    "samples": 4,
+    "counts": [
+     4,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 15,
+    "depth": 9,
+    "leaf": false,
+    "samples": 6,
+    "counts": [
+     4,
+     2
+    ],
+    "impurity": 0.918296,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 0.825094,
+    "left": 16,
+    "right": 17,
+    "gain": 0.316689
+   },
+   {
+    "id": 16,
+    "depth": 10,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     0,
+     1
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 17,
+    "depth": 10,
+    "leaf": false,
+    "samples": 5,
+    "counts": [
+     4,
+     1
+    ],
+    "impurity": 0.721928,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 0.979293,
+    "left": 18,
+    "right": 19,
+    "gain": 0.170951
+   },
+   {
+    "id": 18,
+    "depth": 11,
+    "leaf": true,
+    "samples": 2,
+    "counts": [
+     2,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 19,
+    "depth": 11,
+    "leaf": false,
+    "samples": 3,
+    "counts": [
+     2,
+     1
+    ],
+    "impurity": 0.918296,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 0.996992,
+    "left": 20,
+    "right": 21,
+    "gain": 0.918296
+   },
+   {
+    "id": 20,
+    "depth": 12,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     0,
+     1
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 21,
+    "depth": 12,
+    "leaf": true,
+    "samples": 2,
+    "counts": [
+     2,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 22,
+    "depth": 8,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     0,
+     1
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 23,
+    "depth": 2,
+    "leaf": false,
+    "samples": 20,
+    "counts": [
+     6,
+     14
+    ],
+    "impurity": 0.881291,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": -0.810659,
+    "left": 24,
+    "right": 25,
+    "gain": 0.30984
+   },
+   {
+    "id": 24,
+    "depth": 3,
+    "leaf": true,
+    "samples": 3,
+    "counts": [
+     3,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 25,
+    "depth": 3,
+    "leaf": false,
+    "samples": 17,
+    "counts": [
+     3,
+     14
+    ],
+    "impurity": 0.672295,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": 1.14457,
+    "left": 26,
+    "right": 35,
+    "gain": 0.160705
+   },
+   {
+    "id": 26,
+    "depth": 4,
+    "leaf": false,
+    "samples": 16,
+    "counts": [
+     2,
+     14
+    ],
+    "impurity": 0.543564,
+    "prediction": 1,
+    "feature": 0,
+    "threshold": 2.396178,
+    "left": 27,
+    "right": 28,
+    "gain": 0.113699
+   },
+   {
+    "id": 27,
+    "depth": 5,
+    "leaf": true,
+    "samples": 7,
+    "counts": [
+     0,
+     7
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 28,
+    "depth": 5,
+    "leaf": false,
+    "samples": 9,
+    "counts": [
+     2,
+     7
+    ],
+    "impurity": 0.764205,
+    "prediction": 1,
+    "feature": 0,
+    "threshold": 2.729639,
+    "left": 29,
+    "right": 34,
+    "gain": 0.31976
+   },
+   {
+    "id": 29,
+    "depth": 6,
+    "leaf": false,
+    "samples": 4,
+    "counts": [
+     2,
+     2
+    ],
+    "impurity": 1.0,
+    "prediction": 0,
+    "feature": 0,
+    "threshold": 2.555414,
+    "left": 30,
+    "right": 31,
+    "gain": 0.311278
+   },
+   {
+    "id": 30,
+    "depth": 7,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     1,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 31,
+    "depth": 7,
+    "leaf": false,
+    "samples": 3,
+    "counts": [
+     1,
+     2
+    ],
+    "impurity": 0.918296,
+    "prediction": 1,
+    "feature": 0,
+    "threshold": 2.712728,
+    "left": 32,
+    "right": 33,
+    "gain": 0.918296
+   },
+   {
+    "id": 32,
+    "depth": 8,
+    "leaf": true,
+    "samples": 2,
+    "counts": [
+     0,
+     2
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 33,
+    "depth": 8,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     1,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 34,
+    "depth": 6,
+    "leaf": true,
+    "samples": 5,
+    "counts": [
+     0,
+     5
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 35,
+    "depth": 4,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     1,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 36,
+    "depth": 1,
+    "leaf": false,
+    "samples": 89,
+    "counts": [
+     9,
+     80
+    ],
+    "impurity": 0.472547,
+    "prediction": 1,
+    "feature": 0,
+    "threshold": 0.228894,
+    "left": 37,
+    "right": 42,
+    "gain": 0.222333
+   },
+   {
+    "id": 37,
+    "depth": 2,
+    "leaf": false,
+    "samples": 10,
+    "counts": [
+     7,
+     3
+    ],
+    "impurity": 0.881291,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 1.641703,
+    "left": 38,
+    "right": 39,
+    "gain": 0.281291
+   },
+   {
+    "id": 38,
+    "depth": 3,
+    "leaf": true,
+    "samples": 4,
+    "counts": [
+     4,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 39,
+    "depth": 3,
+    "leaf": false,
+    "samples": 6,
+    "counts": [
+     3,
+     3
+    ],
+    "impurity": 1.0,
+    "prediction": 0,
+    "feature": 1,
+    "threshold": 1.989241,
+    "left": 40,
+    "right": 41,
+    "gain": 1.0
+   },
+   {
+    "id": 40,
+    "depth": 4,
+    "leaf": true,
+    "samples": 3,
+    "counts": [
+     0,
+     3
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 41,
+    "depth": 4,
+    "leaf": true,
+    "samples": 3,
+    "counts": [
+     3,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 42,
+    "depth": 2,
+    "leaf": false,
+    "samples": 79,
+    "counts": [
+     2,
+     77
+    ],
+    "impurity": 0.170331,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": 1.893412,
+    "left": 43,
+    "right": 50,
+    "gain": 0.040134
+   },
+   {
+    "id": 43,
+    "depth": 3,
+    "leaf": false,
+    "samples": 27,
+    "counts": [
+     2,
+     25
+    ],
+    "impurity": 0.380947,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": 1.861638,
+    "left": 44,
+    "right": 49,
+    "gain": 0.154464
+   },
+   {
+    "id": 44,
+    "depth": 4,
+    "leaf": false,
+    "samples": 26,
+    "counts": [
+     1,
+     25
+    ],
+    "impurity": 0.235193,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": 1.716526,
+    "left": 45,
+    "right": 46,
+    "gain": 0.075897
+   },
+   {
+    "id": 45,
+    "depth": 5,
+    "leaf": true,
+    "samples": 19,
+    "counts": [
+     0,
+     19
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 46,
+    "depth": 5,
+    "leaf": false,
+    "samples": 7,
+    "counts": [
+     1,
+     6
+    ],
+    "impurity": 0.591673,
+    "prediction": 1,
+    "feature": 1,
+    "threshold": 1.723245,
+    "left": 47,
+    "right": 48,
+    "gain": 0.591673
+   },
+   {
+    "id": 47,
+    "depth": 6,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     1,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 48,
+    "depth": 6,
+    "leaf": true,
+    "samples": 6,
+    "counts": [
+     0,
+     6
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   },
+   {
+    "id": 49,
+    "depth": 4,
+    "leaf": true,
+    "samples": 1,
+    "counts": [
+     1,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": 0
+   },
+   {
+    "id": 50,
+    "depth": 3,
+    "leaf": true,
+    "samples": 52,
+    "counts": [
+     0,
+     52
+    ],
+    "impurity": 0.0,
+    "prediction": 1
+   }
+  ]
+ },
+ "new_ball": {
+  "x": 18.7,
+  "true_color": "yellow",
+  "nearest": [
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "full_leaf": 10,
+  "full_prediction": "blue",
+  "pruned_leaf": 8,
+  "pruned_prediction": "yellow"
+ },
+ "pruned_ball_tree": {
+  "n_questions": 3,
+  "nodes": [
+   {
+    "id": 0,
+    "depth": 0,
+    "leaf": false,
+    "samples": 20,
+    "counts": [
+     9,
+     11
+    ],
+    "impurity": 0.992774,
+    "prediction": "yellow",
+    "feature": 0,
+    "threshold": 12.5,
+    "left": 1,
+    "right": 8,
+    "gain": 0.160885,
+    "question": "x <= 12",
+    "t": 12,
+    "balls": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   },
+   {
+    "id": 1,
+    "depth": 1,
+    "leaf": false,
+    "samples": 13,
+    "counts": [
+     8,
+     5
+    ],
+    "impurity": 0.961237,
+    "prediction": "blue",
+    "feature": 0,
+    "threshold": 8.5,
+    "left": 2,
+    "right": 7,
+    "gain": 0.275107,
+    "question": "x <= 8",
+    "t": 8,
+    "balls": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "id": 2,
+    "depth": 2,
+    "leaf": false,
+    "samples": 9,
+    "counts": [
+     4,
+     5
+    ],
+    "impurity": 0.991076,
+    "prediction": "yellow",
+    "feature": 0,
+    "threshold": 4.5,
+    "left": 3,
+    "right": 6,
+    "gain": 0.590005,
+    "question": "x <= 4",
+    "t": 4,
+    "balls": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "id": 3,
+    "depth": 3,
+    "leaf": true,
+    "samples": 5,
+    "counts": [
+     4,
+     1
+    ],
+    "impurity": 0.721928,
+    "prediction": "blue",
+    "balls": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "collapsed": true
+   },
+   {
+    "id": 6,
+    "depth": 3,
+    "leaf": true,
+    "samples": 4,
+    "counts": [
+     0,
+     4
+    ],
+    "impurity": 0.0,
+    "prediction": "yellow",
+    "balls": [
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "id": 7,
+    "depth": 2,
+    "leaf": true,
+    "samples": 4,
+    "counts": [
+     4,
+     0
+    ],
+    "impurity": 0.0,
+    "prediction": "blue",
+    "balls": [
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "id": 8,
+    "depth": 1,
+    "leaf": true,
+    "samples": 7,
+    "counts": [
+     1,
+     6
+    ],
+    "impurity": 0.591673,
+    "prediction": "yellow",
+    "balls": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "collapsed": true
+   }
+  ],
+  "wrong": [
+   0,
+   19
+  ]
+ }
+}

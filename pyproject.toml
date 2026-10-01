@@ -1,0 +1,26 @@
+[project]
+name = "mlcourse"
+version = "0.1.0"
+description = "3b1b-style ML course animations (Manim Community + manim-voiceover)"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "manim>=0.21.0",
+    "manim-voiceover[elevenlabs]>=0.4.0",
+    "python-dotenv>=1.2.3",
+]
+
+[tool.uv]
+# pycairo has no macOS wheels and can't be built here (Santa blocks the
+# compiler sanity-check binary). It comes from Homebrew's `py3cairo` instead,
+# visible through a --system-site-packages venv on Homebrew's python3.14.
+override-dependencies = ["pycairo; sys_platform == 'never'"]
+
+[dependency-groups]
+data = [
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.2",
+    "nbclient>=0.11.0",
+    "nbconvert>=7.17.1",
+    "nbformat>=5.11.1",
+    "scikit-learn>=1.9.1",
+]

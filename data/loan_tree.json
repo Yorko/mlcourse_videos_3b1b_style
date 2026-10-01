@@ -1,0 +1,27 @@
+{
+  "_note": "Placeholder cold-open tree (scene 1). The article's diagram layout isn't in its text; only the denial path (no home -> income below 5,000 -> deny) is from the article. Replace when the real tree and its 'regrown' variant (scene 10) are computed.",
+  "id": "root",
+  "q": "Owns a home?",
+  "no": {
+    "id": "income5k",
+    "q": "Income > 5,000?",
+    "no": {"id": "deny_income", "leaf": "Deny"},
+    "yes": {
+      "id": "age25",
+      "q": "Age > 25?",
+      "no": {"id": "deny_age", "leaf": "Deny"},
+      "yes": {"id": "approve_age", "leaf": "Approve"}
+    }
+  },
+  "yes": {
+    "id": "edu",
+    "q": "Higher education?",
+    "no": {
+      "id": "income2k",
+      "q": "Income > 2,000?",
+      "no": {"id": "deny_income2k", "leaf": "Deny"},
+      "yes": {"id": "approve_income2k", "leaf": "Approve"}
+    },
+    "yes": {"id": "approve_edu", "leaf": "Approve"}
+  }
+}

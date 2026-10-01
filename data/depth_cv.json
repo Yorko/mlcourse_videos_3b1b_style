@@ -1,0 +1,122 @@
+{
+ "meta": {
+  "source": "https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html",
+  "generated_by": "data/compute.ipynb",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.3"
+ },
+ "cv": {
+  "n_splits": 5,
+  "n_repeats": 10,
+  "stratified": true,
+  "random_state": 17
+ },
+ "rows": [
+  {
+   "max_depth": 1,
+   "train_mean": 0.85725,
+   "train_std": 0.013883,
+   "test_mean": 0.798,
+   "test_std": 0.051682
+  },
+  {
+   "max_depth": 2,
+   "train_mean": 0.895625,
+   "train_std": 0.02762,
+   "test_mean": 0.8545,
+   "test_std": 0.059726
+  },
+  {
+   "max_depth": 3,
+   "train_mean": 0.928375,
+   "train_std": 0.015772,
+   "test_mean": 0.876,
+   "test_std": 0.048724
+  },
+  {
+   "max_depth": 4,
+   "train_mean": 0.9525,
+   "train_std": 0.011859,
+   "test_mean": 0.8795,
+   "test_std": 0.044354
+  },
+  {
+   "max_depth": 5,
+   "train_mean": 0.968375,
+   "train_std": 0.01182,
+   "test_mean": 0.8695,
+   "test_std": 0.050321
+  },
+  {
+   "max_depth": 6,
+   "train_mean": 0.985625,
+   "train_std": 0.009622,
+   "test_mean": 0.8605,
+   "test_std": 0.0485
+  },
+  {
+   "max_depth": 7,
+   "train_mean": 0.991375,
+   "train_std": 0.007795,
+   "test_mean": 0.852,
+   "test_std": 0.048436
+  },
+  {
+   "max_depth": 8,
+   "train_mean": 0.99725,
+   "train_std": 0.004704,
+   "test_mean": 0.8505,
+   "test_std": 0.048086
+  },
+  {
+   "max_depth": 9,
+   "train_mean": 0.998625,
+   "train_std": 0.002875,
+   "test_mean": 0.8495,
+   "test_std": 0.047825
+  },
+  {
+   "max_depth": 10,
+   "train_mean": 0.999625,
+   "train_std": 0.001484,
+   "test_mean": 0.8515,
+   "test_std": 0.048324
+  },
+  {
+   "max_depth": 11,
+   "train_mean": 0.999875,
+   "train_std": 0.000875,
+   "test_mean": 0.852,
+   "test_std": 0.048693
+  },
+  {
+   "max_depth": 12,
+   "train_mean": 1.0,
+   "train_std": 0.0,
+   "test_mean": 0.8515,
+   "test_std": 0.048324
+  },
+  {
+   "max_depth": 13,
+   "train_mean": 1.0,
+   "train_std": 0.0,
+   "test_mean": 0.8515,
+   "test_std": 0.048324
+  },
+  {
+   "max_depth": 14,
+   "train_mean": 1.0,
+   "train_std": 0.0,
+   "test_mean": 0.8515,
+   "test_std": 0.048324
+  },
+  {
+   "max_depth": 15,
+   "train_mean": 1.0,
+   "train_std": 0.0,
+   "test_mean": 0.8515,
+   "test_std": 0.048324
+  }
+ ],
+ "best_depth": 4
+}

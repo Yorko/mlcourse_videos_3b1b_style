@@ -1,0 +1,25 @@
+{
+ "meta": {
+  "source": "https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html",
+  "generated_by": "data/compute.ipynb",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.3"
+ },
+ "n_candidates": 64,
+ "jackpot_no_left": 63,
+ "halvings": [
+  64,
+  32,
+  16,
+  8,
+  4,
+  2,
+  1
+ ],
+ "questions_needed": 6,
+ "twenty": {
+  "questions": 20,
+  "candidates": 1048576,
+  "candidates_approx": 1000000
+ }
+}
