@@ -65,6 +65,14 @@ make clean                                  # delete media/
 Omit `SCENE` to render every scene in the file. Optional `.env` settings:
 `ELEVEN_VOICE_NAME` / `ELEVEN_VOICE_ID` and `ELEVEN_MODEL` (default `eleven_multilingual_v2`).
 
+### Background music
+
+`make music` streams one continuous instrumental bed from Lyria RealTime (Gemini API), timed to the rendered
+scenes, and writes `media/music/bed.wav` plus `bed.cues.txt` (scene start times). It needs `GEMINI_API_KEY` in `.env`
+and the `make final` renders, and it runs in real time (about 10 minutes). Per-scene prompts are in `CUES` in
+`scripts/music.py`. Useful flags: `ARGS=--dry-run` prints the timeline, `--gap 1.0` matches pauses you add
+between scenes in the edit, and `--quality 480p15` times against previews.
+
 ## Known issues
 
 - pydub prints harmless `SyntaxWarning`s on Python 3.14.
