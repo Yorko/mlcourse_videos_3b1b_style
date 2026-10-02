@@ -10,7 +10,7 @@ FILE  ?= scenes/test_scene.py
 SCENE ?=
 ARGS  ?=
 
-MANIM = PYTHONPATH=$(CURDIR) uv run manim
+MANIM = PYTHONPATH=$(CURDIR):$(CURDIR)/scripts uv run manim
 TARGET = $(FILE) $(if $(SCENE),$(SCENE),-a)
 
 .PHONY: preview final data music sync clean
