@@ -2,6 +2,8 @@
 
 I am the developer of [mlcourse.ai](https://mlcourse.ai), and I've always wanted to test 3b1b-style video creation with [Manim](https://www.manim.community/), kudos to Grant Sanderson ([YouTube](https://www.youtube.com/@3blue1brown)). Here I'm sharing the process I followed with the help of Claude Opus 5.5, Gemini 4 Argon, Lyria and a bit of Nano Banana. 
 
+Here is the [final result](https://youtu.be/HAvToyUmyGU): 
+
 [![Final result](https://img.youtube.com/vi/HAvToyUmyGU/maxresdefault.jpg)](https://www.youtube.com/watch?v=HAvToyUmyGU)
 
 First, I asked Claude to create a plan:
