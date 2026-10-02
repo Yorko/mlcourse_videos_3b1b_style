@@ -24,3 +24,6 @@ data = [
     "nbformat>=5.11.1",
     "scikit-learn>=1.9.1",
 ]
+music = [
+    "google-genai>=2.26.0",
+]
