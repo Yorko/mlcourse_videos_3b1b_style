@@ -1,8 +1,8 @@
 # 3b1b-style ML course videos
 
-I am the developer of [mlcourse.ai](mlcourse.ai]), and I've always wanted to test 3b1b-style video creation with [Manim](https://www.manim.community/), kudos to Grant Sanderson ([YouTube](https://www.youtube.com/@3blue1brown)). Here I'm sharing the process I followed with help of Claude Opus 5.5, Gemini 4 Argon, Lyria and a bit of Nano Banana. 
+I am the developer of [mlcourse.ai](https://mlcourse.ai), and I've always wanted to test 3b1b-style video creation with [Manim](https://www.manim.community/), kudos to Grant Sanderson ([YouTube](https://www.youtube.com/@3blue1brown)). Here I'm sharing the process I followed with the help of Claude Opus 5.5, Gemini 4 Argon, Lyria and a bit of Nano Banana. 
 
-[![Final result](https://img.youtube.com/vi/HAvToyUmyGU/maxresdefault.jpg)](https://www.youtube.com/watch?v= HAvToyUmyGU)
+[![Final result](https://img.youtube.com/vi/HAvToyUmyGU/maxresdefault.jpg)](https://www.youtube.com/watch?v=HAvToyUmyGU)
 
 First, I asked Claude to create a plan:
 
@@ -14,16 +14,16 @@ Then I basically followed the plan, jumping between Claude and Gemini subagents.
 
  - creating a narrative ([docs/narration_decision_trees.md](docs/narration_decision_trees.md)) and reviewing it with 3 subagents (beginner, ML expert, YouTube editor);
  - creating a style ([docs/STYLE.md](docs/STYLE.md));
- - then a creating storyboard in Manim format ([docs/STORYBOARD.md](docs/STORYBOARD.md));
+ - creating a storyboard in Manim format ([docs/STORYBOARD.md](docs/STORYBOARD.md));
  - doing a voice clone with ElevenLabs (API key needed);
  - rendering scenes following the storyboard (11 scenes for a 10-minute video in my case);
- - adding a background siundtrack with Lyria Live API (Gemini API key needed);
- - revieweing the scenes and final editing.
+ - adding a background soundtrack with Lyria Live API (Gemini API key needed);
+ - reviewing the scenes and final editing.
 
 Some observations:
  - I started off with an mlcourse.ai [article](https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html), it's a good start; otherwise, you need to invest time in some seed images and/or animations;
  - LLM assistance is superb, the bottleneck is actually watching and verifying the video episodes. Subtle issues can still occur;
- - Claude Opus 5.5 is most helpful, Gemini 4 Argon subjectively is on par but atm (Oct 2026) only max thinking level is available, and so it's a bit slow;
+ - Claude Opus 5.5 is the most helpful, Gemini 4 Argon subjectively is on par but atm (Oct 2026) only max thinking level is available, and so it's a bit slow;
  - To make it impeccable, you still need some post-processing with video-editing tools, also it's a good practice to narrate videos by yourself, without AI dubbing (3b1b btw narrates everything himself).  
 
 ## Setup
