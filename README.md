@@ -1,25 +1,38 @@
-# 3b1b-style ML course
+# 3b1b-style ML course videos
 
-Manim Community + manim-voiceover (ElevenLabs), managed with uv.
+I am the developer of [mlcourse.ai](mlcourse.ai]), and I've always wanted to test 3b1b-style video creation with [Manim](https://www.manim.community/), kudos to Grant Sanderson ([YouTube](https://www.youtube.com/@3blue1brown)). Here I'm sharing the process I followed with help of Claude Opus 5.5, Gemini 4 Argon, Lyria and a bit of Nano Banana. 
 
-The planI'm following: [docs/decision_trees_video_plan.md](docs/decision_trees_video_plan.md)
+[![Final result](https://img.youtube.com/vi/HAvToyUmyGU/maxresdefault.jpg)](https://www.youtube.com/watch?v= HAvToyUmyGU)
 
-```
-style.py        palette, fonts, timing — `from style import *` in every scene
-voice.py        speech_service(): ElevenLabs if ELEVEN_API_KEY is set, else silent placeholder audio
-scenes/         one file per video; test_scene.py is the smoke test
-Makefile        preview / final targets
-```
+First, I asked Claude to create a plan:
+
+> I want to create an impeccable video on classification and decision trees based on my article https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html. I want it to be in the style of 3blue1brown, using his library https://github.com/3b1b/manim  create a plan for me, what do I need to do step by step, I want to use AI assistants as much as possible
+
+Here is the plan: [docs/decision_trees_video_plan.md](docs/decision_trees_video_plan.md). 
+
+Then I basically followed the plan, jumping between Claude and Gemini subagents. It can still be (almost) fully automated but I preferred to follow the plan manually. In a nutshell, the steps are:
+
+ - creating a narrative ([docs/narration_decision_trees.md](docs/narration_decision_trees.md)) and reviewing it with 3 subagents (beginner, ML expert, YouTube editor);
+ - creating a style ([docs/STYLE.md](docs/STYLE.md));
+ - then a creating storyboard in Manim format ([docs/STORYBOARD.md](docs/STORYBOARD.md));
+ - doing a voice clone with ElevenLabs (API key needed);
+ - rendering scenes following the storyboard (11 scenes for a 10-minute video in my case);
+ - adding a background siundtrack with Lyria Live API (Gemini API key needed);
+ - revieweing the scenes and final editing.
+
+Some observations:
+ - I started off with an mlcourse.ai [article](https://mlcourse.ai/book/topic03/topic03_decision_trees_kNN.html), it's a good start; otherwise, you need to invest time in some seed images and/or animations;
+ - LLM assistance is superb, the bottleneck is actually watching and verifying the video episodes. Subtle issues can still occur;
+ - Claude Opus 5.5 is most helpful, Gemini 4 Argon subjectively is on par but atm (Oct 2026) only max thinking level is available, and so it's a bit slow;
+ - To make it impeccable, you still need some post-processing with video-editing tools, also it's a good practice to narrate videos by yourself, without AI dubbing (3b1b btw narrates everything himself).  
 
 ## Setup
 
-This Mac runs Santa in Lockdown mode, which blocks locally compiled binaries, so
-`pycairo` can't be built from source. It comes from Homebrew instead and the venv
-sees it via `--system-site-packages` (`pyproject.toml` tells uv to skip it).
+For Mac
 
 ```bash
 brew install py3cairo sox ffmpeg
-uv venv --python /opt/homebrew/bin/python3.14 --system-site-packages
+uv venv
 uv sync
 cp .env.example .env   # add ELEVEN_API_KEY (optional for previews)
 ```
@@ -37,6 +50,7 @@ cp .env.example .env   # add ELEVEN_API_KEY (optional for previews)
    make preview
    ```
    Expect `media/videos/test_scene/480p15/TestScene.mp4` plus a `.srt`.
+   
 3. **Output has video + audio**:
    
    ```bash
@@ -73,9 +87,3 @@ and the `make final` renders, and it runs in real time (about 10 minutes). Per-s
 `scripts/music.py`. Useful flags: `ARGS=--dry-run` prints the timeline, `--gap 1.0` matches pauses you add
 between scenes in the edit, and `--quality 480p15` times against previews.
 
-## Known issues
-
-- pydub prints harmless `SyntaxWarning`s on Python 3.14.
-- "SoX could not be found!" appears because Santa blocks Homebrew's ad-hoc-signed `sox`.
-  It's harmless unless you pass `global_speed` (other than 1.0) to `speech_service()`, the only
-  place manim-voiceover uses SoX. If you need it, ask IT to allowlist `/opt/homebrew/Cellar/sox/*/bin/sox`.
